@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Components Explained</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      padding: 20px;
+      background: url('images/bmw2.jpg') no-repeat center center fixed; 
+      background-size: cover;
+    }
+    canvas {
+      display: block;
+    }
+    .container {
+      margin: auto;
+      max-width: 800px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #fff; /* Set heading text color to white */
+    }
+    #main-content {
+      text-align: center;
+    }
+    .button-container {
+      text-align: center;
+      margin-bottom: 20px; /* Add margin at the bottom */
+    }
+    .button-container a {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      text-decoration: none; /* Remove default link underline */
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+    .button-container a:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shadow Customs</h1>
+  <div class="button-container">
+    <a href="about">Home</a>
+    <a href="components">Components explained</a>
+    <a href="search">Search for Cars</a>
+    <a href="list">List Cars</a>
+  </div>
+  <body>
+    <h1><%=shopName%> Shop</h1>
+    <h2>Here are the cars we can provide parts for:</h2>
+    <ul>
+      <head>
+        <meta charset="UTF-8">
+        <title>Performance Parts</title>
+        <style>
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+          th {
+            background-color: #000000;
+          }
+        </style>
+      </head>
+      <body>
+      
+      <h2>Performance Parts</h2>
+      
+      <table>
+        <tr>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Engine</th>
+          <th>Oil</th>
+          <th>Air Filter</th>
+          <th>Spark Plugs</th>
+          <th>Suspension</th>
+          <th>Exhaust</th>
+          <th>Brakes</th>
+          <th>Tyres</th>
+        </tr>
+        <tr>
+          <td>BMW</td>
+          <td>1,2,3,4,5 Series</td>
+          <td>2.0l B48</td>
+          <td>5W-30</td>
+          <td>MST-BW-B4801</td>
+          <td>NGK 94201</td>
+          <td>BILSTEIN</td>
+          <td>STONE</td>
+          <td>EBC</td>
+          <td>MICHELIN</td>
+        </tr>
+        <tr>
+          <td>BMW</td>
+          <td>1 and 3 Series</td>
+          <td>1.6l N13</td>
+          <td>5W-30</td>
+          <td>MST-BW-N1301L</td>
+          <td>NGK 91898</td>
+          <td>BILSTEIN</td>
+          <td>REMUS</td>
+          <td>EBC</td>
+          <td>MICHELIN</td>
+        </tr>
+        <tr>
+          <td>BMW</td>
+          <td>1 and 2 Series</td>
+          <td>1.5l B38</td>
+          <td>5W-30</td>
+          <td>MST-BW-MIF5601</td>
+          <td>NGK 130610</td>
+          <td>H&R</td>
+          <td>HKS</td>
+          <td>EBC</td>
+          <td>MICHELIN</td>
+        </tr>
+        <tr>
+          <td>Audi</td>
+          <td>A1 and A3</td>
+          <td>1.4 TFSI</td>
+          <td>5W-30</td>
+          <td>MST-AD-A101</td>
+          <td>NGKSPARKA005314</td>
+          <td>H&R</td>
+          <td>COBRA SPORT</td>
+          <td>RACINGLINE</td>
+          <td>PIRELLI</td>
+        </tr>
+        <tr>
+          <td>Audi</td>
+          <td>A4 and A5</td>
+          <td>2.0 TFSI</td>
+          <td>5W-30</td>
+          <td>JSK-101-DD</td>
+          <td>NGK BKR7EIX</td>
+          <td>FK</td>
+          <td>SCORPION</td>
+          <td>RACINGLINE</td>
+          <td>PIRELLI</td>
+        </tr>
+        <tr>
+          <td>Mercedes</td>
+          <td>A and C Class</td>
+          <td>1.6</td>
+          <td>5W-30</td>
+          <td>MST-MB-A2502</td>
+          <td>NGK 130610</td>
+          <td>FK</td>
+          <td>CKS PERFORMANCE</td>
+          <td>RENNSPORT</td>
+          <td>BRIDGESTONE</td>
+        </tr>
+        <tr>
+          <td>Mercedes</td>
+          <td>C and E Class</td>
+          <td>2.0</td>
+          <td>5W-30</td>
+          <td>MST-MB-A2502</td>
+          <td>NGK 130610</td>
+          <td>EIBACH</td>
+          <td>SCORPION</td>
+          <td>RENNSPORT</td>
+          <td>BRIDGESTONE</td>
+        </tr>
+        <tr>
+          <td>Volkswagen</td>
+          <td>Polo</td>
+          <td>1.2 TSI</td>
+          <td>5W-30</td>
+          <td>FMINDK2</td>
+          <td>NGK IZFR6P7-97153</td>
+          <td>STANCE</td>
+          <td>MILTEK</td>
+          <td>V-MAXX</td>
+          <td>HANKOOK</td>
+        </tr>
+        <tr>
+          <td>Volkswagen</td>
+          <td>Golf</td>
+          <td>1.4 TSI</td>
+          <td>5W-30</td>
+          <td>JSK-229-BK</td>
+          <td>NGK PZKER7B8EGS-93231</td>
+          <td>AP</td>
+          <td>DARKSIDE DEVELOPMENT</td>
+          <td>BREMBO</td>
+          <td>GOODYEAR</td>
+        </tr>
+        <tr>
+          <td>Seat</td>
+          <td>Ibiza</td>
+          <td>1.2 TSI</td>
+          <td>5W-30</td>
+          <td>FMINDK2</td>
+          <td>NGK IZFR6P7-97153</td>
+          <td>DTSLine</td>
+          <td>COBRA SPORT</td>
+          <td>CEIKA</td>
+          <td>FALKEN</td>
+        </tr>
+        <tr>
+          <td>Seat</td>
+          <td>Leon</td>
+          <td>1.4 TSI</td>
+          <td>5W-30</td>
+          <td>JSK-229-BK</td>
+          <td>NGK PZKER7B8EGS-93231</td>
+          <td>VOGTLAND</td>
+          <td>MILLTEK</td>
+          <td>TARROX</td>
+          <td>NEXEN</td>
+        </tr>
+        <tr>
+          <td>Vauxhall</td>
+          <td>Corsa</td>
+          <td>1.2</td>
+          <td>5W-30</td>
+          <td>SR-078</td>
+          <td>NGK ZFR5F</td>
+          <td>JOM</td>
+          <td>HORNET</td>
+          <td>MTEC</td>
+          <td>PIRELLI</td>
+        </tr>
+        <tr>
+          <td>Vauxhall</td>
+          <td>Astra</td>
+          <td>1.4</td>
+          <td>5W-30</td>
+          <td>SR-078</td>
+          <td>NGK ZFR6V</td>
+          <td>STANCE</td>
+          <td>COBRA SPORT</td>
+          <td>EBC</td>
+          <td>BRIDGESTONE</td>
+        </tr>
+        <tr>
+          <td>Ford</td>
+          <td>Fiesta</td>
+          <td>1.0 EcoBoost</td>
+          <td>5W-20</td>
+          <td>MST-FD-F1702</td>
+          <td>NGK 93593</td>
+          <td>FK</td>
+          <td>HORNET</td>
+          <td>VUDU</td>
+          <td>FALKEN</td>
+        </tr>
+        <tr>
+          <td>Ford</td>
+          <td>Focus</td>
+          <td>1.0 Ecoboost</td>
+          <td>5W-20</td>
+          <td>ATIKF019</td>
+          <td>NGK 93593</td>
+          <td>BILSTEIN</td>
+          <td>HORNET</td>
+          <td>CEIKA</td>
+          <td>PIRELLI</td>
+        </tr>
+      </table>
+      
+      </body>
+      </html>
+      
+    </ul>
+    </body>
+</html>

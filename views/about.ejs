@@ -1,0 +1,150 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Shadow Customs</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        padding: 20px;
+        background: url('images/bmw2.jpg') no-repeat center center fixed; 
+        background-size: cover;
+      }
+      canvas {
+        display: block;
+      }
+      .container {
+        margin: auto;
+        max-width: 800px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #fff; /* Set heading text color to white */
+      }
+      #main-content {
+        text-align: center;
+      }
+      .button-container {
+        text-align: center;
+        margin-bottom: 20px; /* Add margin at the bottom */
+      }
+      p{
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+      }
+      .button-container a {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        text-decoration: none; /* Remove default link underline */
+        transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      }
+      .button-container a:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shadow Customs</h1>
+    <div class="button-container">
+      <a href="about">Home</a>
+      <a href="components">Components explained</a>
+      <a href="search">Search for Cars</a>
+      <a href="list">List Cars</a>
+    </div>
+    <div id="threejs-container"></div> <!-- Container for Three.js renderer -->
+    <body>
+      <h1>About <%=shopName%></h1>
+      <p>We are Shadow Customs. United Kingdoms Number 1 website which helps young drivers in the UK add some sauce to their vehicles. Our website has everything young drivers need to know about their vehicles and understand how everything works.</p>
+       <img src="images/remap.jpg" >
+      <p>Engine remapping is when the car’s onboard computer (often called an Electronic Control Unit, or ECU) is modified with new software to affect its behaviour.
+        From the factory, the vast majority of cars won’t have their engine’s maximum potential performance on offer  A remap is usually done to unlock more power from an engine by removing some of these restrictions. It’s also possible to have a remap focused on increasing fuel consumption as well.— even on sports cars. ECUs usually limit the engine’s performance to improve reliability, emissions and fuel consumption.
+        An engine remap is performed by writing a new software program onto the engine’s electronic control unit (ECU). </p>
+      <img src="images/car2.jpg" >
+        <p>We can find it all. Drive Safe!</p>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js" onload="onThreeJSLoaded()" onerror="onThreeJSError()" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/OBJLoader2.js" onload="onOBJLoaderLoaded()" onerror="onOBJLoaderError()" defer></script>
+    <script>
+      var threeJSError = false;
+      var OBJLoaderError = false;
+  
+      function onThreeJSLoaded() {
+        console.log('Three.js loaded successfully.');
+        if (!OBJLoaderError) {
+          initializeScene();
+        }
+      }
+  
+      function onThreeJSError() {
+        console.error('Error loading Three.js.');
+        threeJSError = true;
+      }
+  
+      function onOBJLoaderLoaded() {
+        console.log('OBJLoader loaded successfully.');
+      }
+  
+      function onOBJLoaderError() {
+        console.error('Error loading OBJLoader.');
+        OBJLoaderError = true;
+      }
+  
+      function initializeScene() {
+        var container = document.getElementById('threejs-container');
+        if (!container) {
+          console.error('Container element not found.');
+          return;
+        }
+  
+        if (!THREE.OBJLoader2) {
+          console.error('THREE.OBJLoader2 is not available.');
+          return;
+        }
+  
+        // Create a Three.js scene
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement); // Append to container
+  
+        // Load your OBJ model
+        var loader = new THREE.OBJLoader2();
+        loader.load(
+          'engine.obj', // Path to your engine.obj file
+          function (object) {
+            scene.add(object.detail.loaderRootNode);
+          },
+          function (xhr) {
+            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+          },
+          function (error) {
+            console.error('Error loading OBJ file:', error);
+          }
+        );
+  
+        // Position and rotate the camera
+        camera.position.z = 5;
+  
+        // Render the scene
+        function animate() {
+          requestAnimationFrame(animate);
+          renderer.render(scene, camera);
+        }
+        animate();
+      }
+    </script>
+  </body>
+  </html>
+  

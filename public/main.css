@@ -1,0 +1,40 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  padding: 20px;
+  background: url('images/Bmw2.jpg') no-repeat center center fixed; 
+  background-size: cover;
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  text-align: center; /* Align the buttons horizontally */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff; /* Set heading text color to white */
+}
+
+.button-container {
+  display: flex; /* Set container to flex */
+  justify-content: center; /* Center align items horizontally */
+}
+p{
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+a {
+  margin: 10px; /* Add margin between buttons */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
